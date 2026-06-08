@@ -1,3 +1,5 @@
+const FALLBACK_API_KEY = "pub_865d5abc11404f3babe1c7c698f9c51a";
+
 exports.handler = async (event) => {
   const { query, isCategory } = event.queryStringParameters || {};
 
@@ -5,7 +7,8 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: "query is required" }) };
   }
 
-  const params = new URLSearchParams({ apikey: process.env.API_KEY });
+  const apiKey = process.env.API_KEY || FALLBACK_API_KEY;
+  const params = new URLSearchParams({ apikey: apiKey });
   isCategory === "true" ? params.set("category", query) : params.set("q", query);
 
   try {
