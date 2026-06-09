@@ -62,7 +62,7 @@
 }
 
 .news-app-wrapper nav {
-  box-shadow: 0 0 4px 4pxrgb(143, 184, 220)2;
+  box-shadow: 0 0 4px 4px rgb(143, 184, 220);
   background: linear-gradient(60deg, #0d6efd ,40%,  #64a1fd76);
   position: fixed;
   top: 0;
@@ -72,7 +72,7 @@
 }
 
 .news-app-wrapper .offcanvas{
-  background: linear-gradient(60deg, #6efafad3,40%, #fbd376d3);
+  background: linear-gradient(60deg, #067edbd3,40%, #88a8f3d3);
 }
 
 .news-app-wrapper .main-nav {
@@ -122,13 +122,13 @@
 
 .news-app-wrapper .search-bar {
   height: 32px;
-  gap: 8px;
 }
 
 .news-app-wrapper .news-input {
   width: 200px;
   height: 100%;
-  padding-inline: 12px;
+   
+  padding: 20px 14px;
   border-radius: 4px;
   border: 2px solid #bbd0e2;
   font-family: "Roboto", sans-serif;
@@ -249,4 +249,18 @@
   .news-app-wrapper .search-button{
     padding: 8px 12px;
   }
+
+   .main-nav{
+    flex-direction: row-reverse;
+  }
+
+  .news-app-wrapper .search-bar{
+    font-size: 12px;
+  }
+
+ .news-app-wrapper .search-button{
+  padding: 13px 12px;
+ }
 }
+
+
